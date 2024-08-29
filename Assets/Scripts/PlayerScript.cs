@@ -7,12 +7,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerScript : MonoBehaviour
 {
+	[SerializeField] private LayerMask layer;
     private PlayerInput input;
     public Rigidbody2D rbody;
     public BoxCollider2D collider;
     public int speed = 5;
-    public int jumpHeight = 5;
-    public bool isGrounded;
+    public int jumpHeight = 15;
 
     void Awake()
     {
@@ -29,6 +29,8 @@ public class PlayerScript : MonoBehaviour
         {
             jump();
         }
+		
+		Debug.Log(IsGrounded());
     }
     private void move()
     {
@@ -44,7 +46,8 @@ public class PlayerScript : MonoBehaviour
 
     public bool IsGrounded()
     {
-        return Physics.Raycast(transform.position, -Vector3.up, distToGround + 0.1f);
+        RaycastHit2D ray = Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.down, .1f, layer);
+		return ray.collider != null;
     }
 
     private void OnEnable()
