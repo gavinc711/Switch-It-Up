@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7870536115788984310}
   - component: {fileID: 2908967160424989972}
   - component: {fileID: 6867612031311135422}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RedTile
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
