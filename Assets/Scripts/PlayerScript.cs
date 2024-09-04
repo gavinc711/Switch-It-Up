@@ -8,20 +8,17 @@ using UnityEngine.InputSystem;
 public class PlayerScript : MonoBehaviour
 {
 	[SerializeField] private LayerMask layer;
-	[SerializeField] private GameObject redPlatforms;
-	[SerializeField] private GameObject bluePlatforms;
     private PlayerInput input;
     public Rigidbody2D rbody;
     public BoxCollider2D collider;
     public int speed = 5;
-    public int jumpHeight = 20;
+    public int jumpHeight = 15;
 
     void Awake()
     {
         input = new PlayerInput();
         rbody = GetComponent<Rigidbody2D>();
         collider = GetComponent<BoxCollider2D>();
-		redPlatforms.SetActive(false);
     }
 
     void Update()
@@ -31,8 +28,9 @@ public class PlayerScript : MonoBehaviour
         if (input.Control.Jump.triggered && IsGrounded())
         {
             jump();
-			stageChange();
         }
+		
+		Debug.Log(IsGrounded());
     }
     private void move()
     {
@@ -51,20 +49,6 @@ public class PlayerScript : MonoBehaviour
         RaycastHit2D ray = Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.down, .1f, layer);
 		return ray.collider != null;
     }
-	
-	public void stageChange() 
-	{
-		if (redPlatforms.activeSelf)
-		{
-			redPlatforms.SetActive(false);
-			bluePlatforms.SetActive(true);
-		}
-		else
-		{
-			redPlatforms.SetActive(true);
-			bluePlatforms.SetActive(false);
-		}
-	}
 
     private void OnEnable()
     {
