@@ -14100,7 +14100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8813876821220877766, guid: 7068a12e7e516174a8a6ad7f3b144f3c, type: 3}
       propertyPath: m_Name
-      value: EndGoal
+      value: Goal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
