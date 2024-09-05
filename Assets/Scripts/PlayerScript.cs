@@ -7,9 +7,12 @@ using UnityEngine.InputSystem;
 
 public class PlayerScript : MonoBehaviour
 {
-    [SerializeField] private LayerMask layer;
+    [SerializeField] private LayerMask platformLayer;
+	[SerializeField] private LayerMask deathLayer;
     [SerializeField] private GameObject redPlatforms;
     [SerializeField] private GameObject bluePlatforms;
+	[SerializeField] private Transform respawn;
+	private GameObject player;
     private PlayerInput input;
     public Rigidbody2D rbody;
     public BoxCollider2D collider;
@@ -22,6 +25,7 @@ public class PlayerScript : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
         collider = GetComponent<BoxCollider2D>();
         redPlatforms.SetActive(false);
+		player = this.gameObject;
     }
 
     void Update()
@@ -33,6 +37,11 @@ public class PlayerScript : MonoBehaviour
             jump();
             stageChange();
         }
+		
+		if (Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.down, .1f, deathLayer))
+		{
+			death();
+		}
     }
     private void move()
     {
@@ -48,7 +57,7 @@ public class PlayerScript : MonoBehaviour
 
     public bool IsGrounded()
     {
-        RaycastHit2D ray = Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.down, .1f, layer);
+        RaycastHit2D ray = Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.down, .1f, platformLayer);
         return ray.collider != null;
     }
 
@@ -65,6 +74,11 @@ public class PlayerScript : MonoBehaviour
             bluePlatforms.SetActive(false);
         }
     }
+	
+	public void death()
+	{
+		player.transform.position = respawn.position;
+	}
 
     private void OnEnable()
     {
