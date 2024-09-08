@@ -7,18 +7,25 @@ using UnityEngine.InputSystem;
 
 public class PlayerScript : MonoBehaviour
 {
-	[SerializeField] private LayerMask layer;
+    [SerializeField] private LayerMask platformLayer;
+	[SerializeField] private LayerMask deathLayer;
+    [SerializeField] private GameObject redPlatforms;
+    [SerializeField] private GameObject bluePlatforms;
+	[SerializeField] private Transform respawn;
+	private GameObject player;
     private PlayerInput input;
     public Rigidbody2D rbody;
     public BoxCollider2D collider;
     public int speed = 5;
-    public int jumpHeight = 15;
+    public int jumpHeight = 20;
 
     void Awake()
     {
         input = new PlayerInput();
         rbody = GetComponent<Rigidbody2D>();
         collider = GetComponent<BoxCollider2D>();
+        redPlatforms.SetActive(false);
+		player = this.gameObject;
     }
 
     void Update()
@@ -28,9 +35,13 @@ public class PlayerScript : MonoBehaviour
         if (input.Control.Jump.triggered && IsGrounded())
         {
             jump();
+            stageChange();
         }
 		
-		Debug.Log(IsGrounded());
+		if (Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.down, .1f, deathLayer))
+		{
+			death();
+		}
     }
     private void move()
     {
@@ -46,9 +57,28 @@ public class PlayerScript : MonoBehaviour
 
     public bool IsGrounded()
     {
-        RaycastHit2D ray = Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.down, .1f, layer);
-		return ray.collider != null;
+        RaycastHit2D ray = Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.down, .1f, platformLayer);
+        return ray.collider != null;
     }
+
+    public void stageChange()
+    {
+        if (redPlatforms.activeSelf)
+        {
+            redPlatforms.SetActive(false);
+            bluePlatforms.SetActive(true);
+        }
+        else
+        {
+            redPlatforms.SetActive(true);
+            bluePlatforms.SetActive(false);
+        }
+    }
+	
+	public void death()
+	{
+		player.transform.position = respawn.position;
+	}
 
     private void OnEnable()
     {
