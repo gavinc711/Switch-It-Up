@@ -19,6 +19,13 @@ public class PlayerScript : MonoBehaviour
     public int speed = 5;
     public int jumpHeight = 20;
 
+    //All of Dante's variables
+    private Animator animator;
+    
+    private bool grounded = true;
+    private float horizontal;
+    private bool isFacingRight = true;
+
     //sets everything as game starts up
     void Awake()
     {
@@ -27,12 +34,25 @@ public class PlayerScript : MonoBehaviour
         collider = GetComponent<BoxCollider2D>();
         redPlatforms.SetActive(false); //turns red platforms off
 		player = this.gameObject; //sets player to the object attatched to this script
+        animator = GetComponent<Animator>();
+        if (animator == null)
+        {
+            Debug.LogError("Animator component is missing from the GameObject.");
+        }
     }
 
     void Update()
     {
-        move();
 
+        //Check for grounded for anims
+        grounded = IsGrounded();
+        animator.SetBool("Grounded", grounded); // Set the Animator's Grounded parameter
+        float horizontalMovement = Input.GetAxisRaw("Horizontal");
+        animator.SetFloat("Speed", Mathf.Abs(horizontalMovement));
+
+        move();
+        horizontal = Input.GetAxisRaw("Horizontal");
+        Flip();
         //Check if jump is pressed and player is on the ground
         if (input.Control.Jump.triggered && IsGrounded())
         {
@@ -97,5 +117,16 @@ public class PlayerScript : MonoBehaviour
     private void OnDisable()
     {
         input.Disable();
+    }
+    //This allows me to only use 1 animation clip, and just change the X scale to -1 to flip the character.  Works in 2D
+    private void Flip()
+    {
+        if(isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
     }
 }
