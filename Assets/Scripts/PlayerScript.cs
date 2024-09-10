@@ -65,6 +65,12 @@ public class PlayerScript : MonoBehaviour
 		{
 			death();
 		}
+		
+		//If any quit button is pressed, for debug purposes
+		if (input.Control.Quit.triggered)
+		{
+			Application.Quit();
+		}
     }
     private void move()
     {

@@ -44,6 +44,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Quit"",
+                    ""type"": ""Button"",
+                    ""id"": ""99ab9a9c-1307-485d-9bc1-329202600885"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -145,6 +154,28 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d3285986-7521-430f-8067-96996bcf41b0"",
+                    ""path"": ""<Gamepad>/select"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Quit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9d3bd42d-857a-4723-893f-45fb9cd8c1ba"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Quit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -155,6 +186,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Control = asset.FindActionMap("Control", throwIfNotFound: true);
         m_Control_Movement = m_Control.FindAction("Movement", throwIfNotFound: true);
         m_Control_Jump = m_Control.FindAction("Jump", throwIfNotFound: true);
+        m_Control_Quit = m_Control.FindAction("Quit", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -218,12 +250,14 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private List<IControlActions> m_ControlActionsCallbackInterfaces = new List<IControlActions>();
     private readonly InputAction m_Control_Movement;
     private readonly InputAction m_Control_Jump;
+    private readonly InputAction m_Control_Quit;
     public struct ControlActions
     {
         private @PlayerInput m_Wrapper;
         public ControlActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Control_Movement;
         public InputAction @Jump => m_Wrapper.m_Control_Jump;
+        public InputAction @Quit => m_Wrapper.m_Control_Quit;
         public InputActionMap Get() { return m_Wrapper.m_Control; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -239,6 +273,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
+            @Quit.started += instance.OnQuit;
+            @Quit.performed += instance.OnQuit;
+            @Quit.canceled += instance.OnQuit;
         }
 
         private void UnregisterCallbacks(IControlActions instance)
@@ -249,6 +286,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
+            @Quit.started -= instance.OnQuit;
+            @Quit.performed -= instance.OnQuit;
+            @Quit.canceled -= instance.OnQuit;
         }
 
         public void RemoveCallbacks(IControlActions instance)
@@ -270,5 +310,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnQuit(InputAction.CallbackContext context);
     }
 }
