@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8aef6a6e491c0e8438bac796eb32fc3e
+guid: 06831d5a5b0e2384fba72fe071ded6fd
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -181,7 +181,7 @@ TextureImporter:
         x: 0
         y: 0
         width: 100
-        height: 50
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,8 +189,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b77d0a5246f9d24189f57e15d07a24e
-      internalID: 537177925
+      spriteID: 6c83e6f71880f964a9ab996f82770311
+      internalID: -1160788179
       vertices: []
       indices: 
       edges: []
@@ -202,7 +202,7 @@ TextureImporter:
         x: 100
         y: 0
         width: 100
-        height: 50
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,8 +210,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41fa852bd319d16498e4900f1040aa3b
-      internalID: -606241027
+      spriteID: 5743e7376931b8b4ab843b6a7cb8ec03
+      internalID: -882760758
       vertices: []
       indices: 
       edges: []
@@ -223,7 +223,7 @@ TextureImporter:
         x: 200
         y: 0
         width: 100
-        height: 50
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,8 +231,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f85aec45afaa474d9af80717bde228d
-      internalID: -720026020
+      spriteID: 504a2a771dd99884694ff2c63159d00d
+      internalID: -103513187
       vertices: []
       indices: 
       edges: []
@@ -248,9 +248,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RedLaserHorizontal_0: 537177925
-      RedLaserHorizontal_1: -606241027
-      RedLaserHorizontal_2: -720026020
+      RedLaserHorizontal_0: -1160788179
+      RedLaserHorizontal_1: -882760758
+      RedLaserHorizontal_2: -103513187
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

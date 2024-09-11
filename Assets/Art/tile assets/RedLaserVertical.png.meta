@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c36b6d1a7b4d5b446aa8e71ab0618866
+guid: 25a0d7e2d3c5c1740bd323d6218dca18
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -180,7 +180,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 200
-        width: 50
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -189,8 +189,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0345a0bb86bebd94195887d20824a002
-      internalID: -2061914219
+      spriteID: a5b8a1c864870f442acdef72d621017c
+      internalID: -606685629
       vertices: []
       indices: 
       edges: []
@@ -201,7 +201,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 100
-        width: 50
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -210,8 +210,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb238e3a71c4cff44a220725c92ee4c2
-      internalID: 776018595
+      spriteID: b7598a6b5a2257b498da8dd0951b173f
+      internalID: -511701306
       vertices: []
       indices: 
       edges: []
@@ -222,7 +222,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 50
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -231,8 +231,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7196dd1771748cc4c958337248b59ea9
-      internalID: 1247220820
+      spriteID: 485f71565a446c54c92ccd1253d8e90b
+      internalID: -608302728
       vertices: []
       indices: 
       edges: []
@@ -248,9 +248,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RedLaserVertical_0: -2061914219
-      RedLaserVertical_1: 776018595
-      RedLaserVertical_2: 1247220820
+      RedLaserVertical_0: -606685629
+      RedLaserVertical_1: -511701306
+      RedLaserVertical_2: -608302728
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

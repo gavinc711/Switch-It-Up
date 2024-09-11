@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3e565f9dba5c37a4589b5a264319c897
+guid: d97bab0dc14c3a846a6062f2fc8fe6e9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -180,7 +180,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 200
-        width: 50
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -189,8 +189,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9426be31d2a29b544955bf2fe903b693
-      internalID: 1571435810
+      spriteID: 9b4bf72023fe13c4dbb9ea1954d3ad91
+      internalID: -1050130021
       vertices: []
       indices: 
       edges: []
@@ -201,7 +201,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 100
-        width: 50
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -210,8 +210,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39ce0c5aa8419b84aa8fc6bc0b7db23d
-      internalID: 1191718375
+      spriteID: 61aaf9d93140cd945a0593cdf0630496
+      internalID: -96224493
       vertices: []
       indices: 
       edges: []
@@ -222,7 +222,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 50
+        width: 100
         height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -231,8 +231,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 716ea09b84b53cd41b8d78fe919829b2
-      internalID: 700843303
+      spriteID: 2ca3ade600326ca48a2ca9d9ac72575c
+      internalID: -1607363912
       vertices: []
       indices: 
       edges: []
@@ -248,9 +248,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BlueLaserVertical_0: 1571435810
-      BlueLaserVertical_1: 1191718375
-      BlueLaserVertical_2: 700843303
+      BlueLaserVertical_0: -1050130021
+      BlueLaserVertical_1: -96224493
+      BlueLaserVertical_2: -1607363912
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
