@@ -57,6 +57,7 @@ public class PlayerScript : MonoBehaviour
         //Check if jump is pressed and player is on the ground
         if (input.Control.Jump.triggered && IsGrounded())
         {
+            //Prevent these actions from happening if paused
             if (!pauseMenu.activeSelf)
             {
                 jump();
@@ -70,6 +71,7 @@ public class PlayerScript : MonoBehaviour
 			death();
 		}
 
+        //Pauses and unpauses game
         if (input.Control.Pause.triggered)
         {
             gamePause();
@@ -85,6 +87,7 @@ public class PlayerScript : MonoBehaviour
     {
         var horizontal = input.Control.Movement.ReadValue<Vector2>();
         
+        //prevent movement if paused
         if (!pauseMenu.activeSelf)
             transform.Translate(horizontal * speed * Time.deltaTime);
     }
@@ -94,7 +97,7 @@ public class PlayerScript : MonoBehaviour
         rbody.velocity += Vector2.up * jumpHeight;
     }
 
-    private void gamePause()
+    public void gamePause()
     {
         if (!pauseMenu.activeSelf)
         {

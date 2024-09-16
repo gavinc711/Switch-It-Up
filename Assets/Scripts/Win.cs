@@ -10,6 +10,7 @@ public class Win : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         PlayerScript player = other.GetComponent<PlayerScript>();
+        
         if(player != null)
         {
             youWin.SetActive(true);
