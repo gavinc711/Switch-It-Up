@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Sci-FiPlatformTiles_4
+  m_Name: SpikesLeft_0
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 797282985, guid: bee7568dd2c89454396d83aeb66a2680, type: 3}
+  m_Sprite: {fileID: 293615588, guid: 66a5071582040374d8770f5d577c9e08, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
