@@ -7,12 +7,14 @@ using UnityEngine.InputSystem;
 
 public class PlayerScript : MonoBehaviour
 {
+    //Gavin's variables
     [SerializeField] private LayerMask platformLayer; //allows ground detection
 	[SerializeField] private LayerMask deathLayer; //allows detection with death tiles
     [SerializeField] private GameObject redPlatforms;
     [SerializeField] private GameObject bluePlatforms;
-	[SerializeField] private Transform respawn; 
-	private GameObject player;
+	[SerializeField] private Transform respawn;
+    [SerializeField] private GameObject pauseMenu;
+    private GameObject player;
     private PlayerInput input;
     public Rigidbody2D rbody;
     public BoxCollider2D collider;
@@ -21,7 +23,6 @@ public class PlayerScript : MonoBehaviour
 
     //All of Dante's variables
     private Animator animator;
-    
     private bool grounded = true;
     private float horizontal;
     private bool isFacingRight = true;
@@ -43,7 +44,6 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
-
         //Check for grounded for anims
         grounded = IsGrounded();
         animator.SetBool("Grounded", grounded); // Set the Animator's Grounded parameter
@@ -53,11 +53,15 @@ public class PlayerScript : MonoBehaviour
         move();
         horizontal = Input.GetAxisRaw("Horizontal");
         Flip();
+        
         //Check if jump is pressed and player is on the ground
         if (input.Control.Jump.triggered && IsGrounded())
         {
-            jump();
-            stageChange();
+            if (!pauseMenu.activeSelf)
+            {
+                jump();
+                stageChange();
+            }
         }
 		
         //Check if player is touching death tile with respective layer
@@ -65,9 +69,14 @@ public class PlayerScript : MonoBehaviour
 		{
 			death();
 		}
-		
-		//If any quit button is pressed, for debug purposes
-		if (input.Control.Quit.triggered)
+
+        if (input.Control.Pause.triggered)
+        {
+            gamePause();
+        }
+
+        //If any quit button is pressed, for debug purposes
+        if (input.Control.Quit.triggered)
 		{
 			Application.Quit();
 		}
@@ -75,13 +84,24 @@ public class PlayerScript : MonoBehaviour
     private void move()
     {
         var horizontal = input.Control.Movement.ReadValue<Vector2>();
-        horizontal.y = 0;
-        transform.Translate(horizontal * speed * Time.deltaTime);
+        
+        if (!pauseMenu.activeSelf)
+            transform.Translate(horizontal * speed * Time.deltaTime);
     }
 
     private void jump()
     {
         rbody.velocity += Vector2.up * jumpHeight;
+    }
+
+    private void gamePause()
+    {
+        if (!pauseMenu.activeSelf)
+        {
+            pauseMenu.SetActive(true);
+        }
+        else
+            pauseMenu.SetActive(false);
     }
 
     //Checks is player's touching any ground tile with the ground layer
@@ -124,6 +144,7 @@ public class PlayerScript : MonoBehaviour
     {
         input.Disable();
     }
+
     //This allows me to only use 1 animation clip, and just change the X scale to -1 to flip the character.  Works in 2D
     private void Flip()
     {
