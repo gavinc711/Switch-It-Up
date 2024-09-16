@@ -26,6 +26,7 @@ public class PlayerScript : MonoBehaviour
     private bool grounded = true;
     private float horizontal;
     private bool isFacingRight = true;
+    private bool isDead;
 
     //sets everything as game starts up
     void Awake()
@@ -68,7 +69,8 @@ public class PlayerScript : MonoBehaviour
         //Check if player is touching death tile with respective layer
 		if (Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.down, .1f, deathLayer))
 		{
-			death();
+            if(isDead == false)
+			    death();
 		}
 
         //Pauses and unpauses game
@@ -80,6 +82,7 @@ public class PlayerScript : MonoBehaviour
         //If any quit button is pressed, for debug purposes
         if (input.Control.Quit.triggered)
 		{
+			Application.Quit();
 			Application.Quit();
 		}
     }
@@ -130,12 +133,50 @@ public class PlayerScript : MonoBehaviour
             bluePlatforms.SetActive(false);
         }
     }
-	
-	public void death()
-	{
-		player.transform.position = respawn.position; //player taken to respawn point
-	}
 
+    public void death()
+    {
+        Debug.Log("We just died");
+        // Trigger the death animation
+        animator.SetBool("IsDead", true);
+        isDead = true;
+
+        // Disable player controls to prevent movement during death
+        input.Disable();
+
+        // Start respawn process after a short delay for the death animation to finish
+        Debug.Log("We just called RespawnAfterDelay");
+        StartCoroutine(RespawnAfterDelay(2f));
+        
+    }
+
+    private IEnumerator RespawnAfterDelay(float delay)
+    {
+        Debug.Log("We just started RespawnAfterDelay");
+        // Wait for the death animation to finish
+        yield return new WaitForSeconds(delay);
+        Debug.Log("We just waited 2 seconds");
+        // Re-enable player controls
+        input.Enable();
+
+        // Move player to the respawn point immediately
+        player.transform.position = respawn.position;
+
+        // Reset Rigidbody2D velocity to prevent floating or unintended motion
+        rbody.velocity = Vector2.zero;
+
+        // Slightly delay before re-enabling input to ensure physics settles
+        yield return new WaitForEndOfFrame();
+
+        // Re-enable gravity after ensuring the player is grounded
+        rbody.gravityScale = 5f;
+
+        // Reset the death state in the Animator
+        animator.SetBool("IsDead", false);
+        isDead = false;
+
+ 
+    }
     //Enables input on startup
     private void OnEnable()
     {
@@ -151,12 +192,15 @@ public class PlayerScript : MonoBehaviour
     //This allows me to only use 1 animation clip, and just change the X scale to -1 to flip the character.  Works in 2D
     private void Flip()
     {
-        if(isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        if (isDead == false)
         {
-            isFacingRight = !isFacingRight;
-            Vector3 localScale = transform.localScale;
-            localScale.x *= -1f;
-            transform.localScale = localScale;
+            if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+            {
+                isFacingRight = !isFacingRight;
+                Vector3 localScale = transform.localScale;
+                localScale.x *= -1f;
+                transform.localScale = localScale;
+            }
         }
     }
 }
