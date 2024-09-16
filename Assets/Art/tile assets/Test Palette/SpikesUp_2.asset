@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SpikeTiles_0
+  m_Name: SpikesUp_2
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 1732113333, guid: 0e3d13c18edd3b9469a0e56f14e80289, type: 3}
+  m_Sprite: {fileID: -1661292177, guid: 52a04e786d357344ea3cdce46b113920, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
