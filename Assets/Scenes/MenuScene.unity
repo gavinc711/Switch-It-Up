@@ -2839,7 +2839,6 @@ GameObject:
   - component: {fileID: 679583323}
   - component: {fileID: 679583322}
   - component: {fileID: 679583321}
-  - component: {fileID: 679583324}
   m_Layer: 5
   m_Name: 'MainMenuButton '
   m_TagString: Untagged
@@ -2910,8 +2909,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 679583324}
-        m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
+      - m_Target: {fileID: 1836672285}
+        m_TargetAssemblyTypeName: PauseM, Assembly-CSharp
         m_MethodName: BackToMain
         m_Mode: 1
         m_Arguments:
@@ -2960,22 +2959,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679583319}
   m_CullTransparentMesh: 1
---- !u!114 &679583324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 679583319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de0af978eb1359b4ab26cf08993b481b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settingsCanvas: {fileID: 88763882}
-  creditsCanvas: {fileID: 1228337022}
-  controlsCanvas: {fileID: 1512145054}
-  pauseCanvas: {fileID: 1914325476}
 --- !u!1 &680361621
 GameObject:
   m_ObjectHideFlags: 0
@@ -6403,11 +6386,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15637906f006bca499f20bb68b4492a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseCanvas: {fileID: 0}
-  mmCanvas: {fileID: 0}
-  settingsCanvas: {fileID: 0}
-  creditsCanvas: {fileID: 0}
-  controlsCanvas: {fileID: 0}
+  pauseCanvas: {fileID: 1914325476}
+  mmCanvas: {fileID: 1646265538}
+  settingsCanvas: {fileID: 88763882}
+  creditsCanvas: {fileID: 1228337022}
+  controlsCanvas: {fileID: 1512145054}
 --- !u!1 &1914325476
 GameObject:
   m_ObjectHideFlags: 0
