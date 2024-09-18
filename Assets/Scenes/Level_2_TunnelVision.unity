@@ -15004,7 +15004,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4536572242449290108, guid: 62ad35c2cab58df49a3b29de9b0bcd76, type: 3}
       propertyPath: m_Name
-      value: star1 (1)
+      value: Star 3
       objectReference: {fileID: 0}
     - target: {fileID: 6297325497660374206, guid: 62ad35c2cab58df49a3b29de9b0bcd76, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27984,7 +27984,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4536572242449290108, guid: 62ad35c2cab58df49a3b29de9b0bcd76, type: 3}
       propertyPath: m_Name
-      value: star1
+      value: Star 2
       objectReference: {fileID: 0}
     - target: {fileID: 6297325497660374206, guid: 62ad35c2cab58df49a3b29de9b0bcd76, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28263,7 +28263,7 @@ Transform:
   m_GameObject: {fileID: 1474231530}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.291307, y: 13.45999, z: -10}
+  m_LocalPosition: {x: -23.438879, y: 13.45999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -30855,7 +30855,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4536572242449290108, guid: 62ad35c2cab58df49a3b29de9b0bcd76, type: 3}
       propertyPath: m_Name
-      value: star1 (2)
+      value: Star 1
       objectReference: {fileID: 0}
     - target: {fileID: 6297325497660374206, guid: 62ad35c2cab58df49a3b29de9b0bcd76, type: 3}
       propertyPath: m_LocalPosition.x
@@ -58600,6 +58600,6 @@ SceneRoots:
   - {fileID: 1944439037}
   - {fileID: 732070473}
   - {fileID: 1671625096}
-  - {fileID: 1463957311}
   - {fileID: 1606768167}
+  - {fileID: 1463957311}
   - {fileID: 804231210}
