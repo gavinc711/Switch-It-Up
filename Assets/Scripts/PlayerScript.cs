@@ -17,7 +17,7 @@ public class PlayerScript : MonoBehaviour
     private GameObject player;
     private PlayerInput input;
     public Rigidbody2D rbody;
-    public BoxCollider2D collider;
+    public CapsuleCollider2D collider;
     public int speed = 5;
     public int jumpHeight = 20;
 
@@ -33,7 +33,7 @@ public class PlayerScript : MonoBehaviour
     {
         input = new PlayerInput(); //initializes input
         rbody = GetComponent<Rigidbody2D>();
-        collider = GetComponent<BoxCollider2D>();
+        collider = GetComponent<CapsuleCollider2D>();
         redPlatforms.SetActive(false); //turns red platforms off
 		player = this.gameObject; //sets player to the object attatched to this script
         animator = GetComponent<Animator>();
@@ -136,7 +136,6 @@ public class PlayerScript : MonoBehaviour
 
     public void death()
     {
-        Debug.Log("We just died");
         // Trigger the death animation
         animator.SetBool("IsDead", true);
         isDead = true;
@@ -145,17 +144,14 @@ public class PlayerScript : MonoBehaviour
         input.Disable();
 
         // Start respawn process after a short delay for the death animation to finish
-        Debug.Log("We just called RespawnAfterDelay");
         StartCoroutine(RespawnAfterDelay(2f));
         
     }
 
     private IEnumerator RespawnAfterDelay(float delay)
     {
-        Debug.Log("We just started RespawnAfterDelay");
         // Wait for the death animation to finish
         yield return new WaitForSeconds(delay);
-        Debug.Log("We just waited 2 seconds");
         // Re-enable player controls
         input.Enable();
 
