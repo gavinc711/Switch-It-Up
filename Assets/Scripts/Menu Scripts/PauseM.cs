@@ -8,7 +8,9 @@ using UnityEngine.SceneManagement;
 public class PauseM : MonoBehaviour
 {
     public GameObject pause;
+    public GameObject mainMenu;
     public GameObject settings;
+    public GameObject credits;
     public GameObject controls;
     private PlayerInput input;
 
