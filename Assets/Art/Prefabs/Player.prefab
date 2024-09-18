@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7275532751561913264}
   - component: {fileID: 5677104798686590915}
-  - component: {fileID: 1872874179827584745}
+  - component: {fileID: 5235384315477280053}
   - component: {fileID: 8996662853202132350}
   - component: {fileID: 8157735446054790086}
   - component: {fileID: 6605863509167122856}
+  - component: {fileID: 133193213952364674}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -88,8 +89,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1872874179827584745
-BoxCollider2D:
+--- !u!70 &5235384315477280053
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -120,19 +121,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06647682, y: 0.002261281}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 3}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.3746853, y: 2.6634347}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.06967926, y: -0.07465744}
+  m_Size: {x: 1.5864868, y: 2.8506851}
+  m_Direction: 0
 --- !u!114 &8996662853202132350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,15 +138,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   deathLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   redPlatforms: {fileID: 0}
   bluePlatforms: {fileID: 0}
   respawn: {fileID: 0}
   rbody: {fileID: 8157735446054790086}
-  collider: {fileID: 1872874179827584745}
+  collider: {fileID: 5235384315477280053}
   speed: 5
   jumpHeight: 20
 --- !u!50 &8157735446054790086
@@ -206,3 +197,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &133193213952364674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7528842842375763600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15637906f006bca499f20bb68b4492a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pause: {fileID: 0}
+  settings: {fileID: 0}
+  controls: {fileID: 0}

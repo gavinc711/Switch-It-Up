@@ -13,7 +13,6 @@ public class PlayerScript : MonoBehaviour
     [SerializeField] private GameObject redPlatforms;
     [SerializeField] private GameObject bluePlatforms;
 	[SerializeField] private Transform respawn;
-    [SerializeField] private GameObject pauseMenu;
     private GameObject player;
     private PlayerInput input;
     public Rigidbody2D rbody;
@@ -58,12 +57,9 @@ public class PlayerScript : MonoBehaviour
         //Check if jump is pressed and player is on the ground
         if (input.Control.Jump.triggered && IsGrounded())
         {
-            //Prevent these actions from happening if paused
-            if (!pauseMenu.activeSelf)
-            {
-                jump();
-                stageChange();
-            }
+            jump();
+            stageChange();
+       
         }
 		
         //Check if player is touching death tile with respective layer
@@ -73,11 +69,7 @@ public class PlayerScript : MonoBehaviour
 			    death();
 		}
 
-        //Pauses and unpauses game
-        if (input.Control.Pause.triggered)
-        {
-            gamePause();
-        }
+        
 
         //If any quit button is pressed, for debug purposes
         if (input.Control.Quit.triggered)
@@ -90,24 +82,12 @@ public class PlayerScript : MonoBehaviour
     {
         var horizontal = input.Control.Movement.ReadValue<Vector2>();
         
-        //prevent movement if paused
-        if (!pauseMenu.activeSelf)
-            transform.Translate(horizontal * speed * Time.deltaTime);
+        transform.Translate(horizontal * speed * Time.deltaTime);
     }
 
     private void jump()
     {
         rbody.velocity += Vector2.up * jumpHeight;
-    }
-
-    public void gamePause()
-    {
-        if (!pauseMenu.activeSelf)
-        {
-            pauseMenu.SetActive(true);
-        }
-        else
-            pauseMenu.SetActive(false);
     }
 
     //Checks is player's touching any ground tile with the ground layer
