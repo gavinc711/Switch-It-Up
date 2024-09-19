@@ -36,6 +36,11 @@ public class MainMenuController : MonoBehaviour
         settings.gameObject.SetActive(true);
     }
 
+    public void Tutorial()
+    {
+        SceneManager.LoadScene("Turorial");
+    }
+
     public void RestartGame() 
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
