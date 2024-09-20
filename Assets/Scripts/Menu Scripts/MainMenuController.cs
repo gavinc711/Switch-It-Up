@@ -12,7 +12,7 @@ public class MainMenuController : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Level_2_TunnelVision");
+        SceneManager.LoadScene(2);
     }
 
     public void Settings()
@@ -35,6 +35,14 @@ public class MainMenuController : MonoBehaviour
         controls.gameObject.SetActive(false);
         settings.gameObject.SetActive(true);
     }
+	
+	public void BackToMain()
+    {
+        if (settings.activeSelf)
+			settings.gameObject.SetActive(false);
+		if (credits.activeSelf)
+			credits.gameObject.SetActive(false);
+    }
 
     public void Tutorial()
     {
@@ -45,4 +53,15 @@ public class MainMenuController : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+	
+	public void Tutorial() 
+    {
+        SceneManager.LoadScene(1);
+    }
+	
+	public void LoadMainMenu()
+	{
+		SceneManager.LoadScene(0);
+	}
+	
 }

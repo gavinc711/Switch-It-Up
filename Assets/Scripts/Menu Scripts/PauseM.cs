@@ -54,9 +54,4 @@ public class PauseM : MonoBehaviour
         GameIsPaused = true;
 
     }
-
-    public void BackToMain()
-    {
-        SceneManager.LoadScene("MenuScene");
-    }
 }
