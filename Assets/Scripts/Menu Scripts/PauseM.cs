@@ -8,8 +8,7 @@ using UnityEngine.SceneManagement;
 public class PauseM : MonoBehaviour
 {
     public GameObject pause;
-
-    public static bool GameIsPaused = false;
+    public bool GameIsPaused = false;
 
     public void Resume()
     {
