@@ -58,5 +58,4 @@ public class MainMenuController : MonoBehaviour
 	{
 		SceneManager.LoadScene(0);
 	}
-	
 }

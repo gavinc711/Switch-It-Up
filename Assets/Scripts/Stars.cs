@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Stars : MonoBehaviour
 {
-	private static bool collected = false;
+	public string id;
 	public static int starCount;
 	
-	void Start()
+	void Awake()
 	{
-		if (collected)
+		if(PlayerPrefs.GetInt(id, 0) == 1)
 			this.gameObject.SetActive(false);
 	}
 	
@@ -18,7 +18,7 @@ public class Stars : MonoBehaviour
 		if(other.gameObject.tag == "Player")
 		{
 			this.gameObject.SetActive(false);
-			collected = true;
+			PlayerPrefs.SetInt(id, 1);
 			starCount += 1;
 		}
 	}

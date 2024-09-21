@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Win : MonoBehaviour
 {
@@ -27,5 +28,7 @@ public class Win : MonoBehaviour
 	{
 		yield return new WaitForSeconds(delay);
 		youWin.SetActive(true);
+		yield return new WaitForSeconds(delay);
+		SceneManager.LoadScene(0);
 	}
 }
