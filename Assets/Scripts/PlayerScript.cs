@@ -27,6 +27,7 @@ public class PlayerScript : MonoBehaviour
     private float horizontal;
     private bool isFacingRight = true;
     private bool isDead;
+    
 
     //sets everything as game starts up
     void Awake()
