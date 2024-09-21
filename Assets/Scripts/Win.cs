@@ -5,7 +5,6 @@ using UnityEngine;
 public class Win : MonoBehaviour
 {
     public GameObject youWin;
-
     
     void OnTriggerEnter2D(Collider2D other)
     {
