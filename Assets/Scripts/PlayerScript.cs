@@ -65,7 +65,10 @@ public class PlayerScript : MonoBehaviour
 		
 		if (input.Control.Pause.triggered)
 		{
-			pause.Paused();
+			if(!pause.GameIsPaused)
+				pause.Paused();
+			else
+				pause.Resume();
 		}
 		
         //Check if player is touching death tile with respective layer
