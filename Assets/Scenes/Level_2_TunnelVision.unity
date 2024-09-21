@@ -12480,12 +12480,12 @@ MonoBehaviour:
   m_ScreenX: 0.5
   m_ScreenY: 0.5
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0.25
+  m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0.2
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 1
-  m_SoftZoneHeight: 0.8
+  m_SoftZoneWidth: 0
+  m_SoftZoneHeight: 0.83
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 0
@@ -23967,7 +23967,7 @@ Transform:
   m_GameObject: {fileID: 1474231530}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.36425, y: 13.45999, z: -10}
+  m_LocalPosition: {x: -23.654284, y: 13.45999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
