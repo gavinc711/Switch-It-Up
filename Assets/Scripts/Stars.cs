@@ -22,4 +22,9 @@ public class Stars : MonoBehaviour
 			starCount += 1;
 		}
 	}
+	
+	void OnApplicationQuit()
+	{
+		PlayerPrefs.DeleteAll();
+	}
 }
