@@ -121,8 +121,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06967926, y: -0.07465744}
-  m_Size: {x: 1.5864868, y: 2.8506851}
+  m_Offset: {x: -0.08262825, y: 0.007354498}
+  m_Size: {x: 1.5260563, y: 2.6003332}
   m_Direction: 0
 --- !u!114 &8996662853202132350
 MonoBehaviour:
@@ -145,6 +145,7 @@ MonoBehaviour:
   redPlatforms: {fileID: 0}
   bluePlatforms: {fileID: 0}
   respawn: {fileID: 0}
+  pause: {fileID: 0}
   rbody: {fileID: 8157735446054790086}
   collider: {fileID: 5235384315477280053}
   speed: 5
@@ -210,5 +211,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pause: {fileID: 0}
-  settings: {fileID: 0}
-  controls: {fileID: 0}
