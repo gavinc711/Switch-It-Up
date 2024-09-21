@@ -8,37 +8,8 @@ using UnityEngine.SceneManagement;
 public class PauseM : MonoBehaviour
 {
     public GameObject pause;
-    public GameObject settings;
-    public GameObject controls;
-    private PlayerInput input;
 
     public static bool GameIsPaused = false;
-
-    void Start()
-    {
-        input = new PlayerInput(); //initializes input
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (input.Menu.Select.triggered)
-        {
-            if (GameIsPaused)
-            {
-                Resume();
-
-                if (settings.activeSelf)
-                {
-                    settings.SetActive(false);
-                }
-            } 
-            else
-            {
-                Paused();
-            }
-        }
-    }
 
     public void Resume()
     {
@@ -47,11 +18,10 @@ public class PauseM : MonoBehaviour
         GameIsPaused = false;
     }
 
-    void Paused()
+    public void Paused()
     {
         pause.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
-
     }
 }

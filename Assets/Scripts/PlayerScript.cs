@@ -15,6 +15,7 @@ public class PlayerScript : MonoBehaviour
 	[SerializeField] private Transform respawn;
     private GameObject player;
     private PlayerInput input;
+	public PauseM pause;
     public Rigidbody2D rbody;
     public CapsuleCollider2D collider;
     public int speed = 5;
@@ -36,6 +37,7 @@ public class PlayerScript : MonoBehaviour
         redPlatforms.SetActive(false); //turns red platforms off
 		player = this.gameObject; //sets player to the object attatched to this script
         animator = GetComponent<Animator>();
+		pause = GetComponent<PauseM>();
         if (animator == null)
         {
             Debug.LogError("Animator component is missing from the GameObject.");
@@ -59,8 +61,12 @@ public class PlayerScript : MonoBehaviour
         {
             jump();
             stageChange();
-       
         }
+		
+		if (input.Control.Pause.triggered)
+		{
+			pause.Paused();
+		}
 		
         //Check if player is touching death tile with respective layer
 		if (Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.down, .1f, deathLayer))
@@ -68,8 +74,6 @@ public class PlayerScript : MonoBehaviour
             if(isDead == false)
 			    death();
 		}
-
-        
 
         //If any quit button is pressed, for debug purposes
         if (input.Control.Quit.triggered)
@@ -149,10 +153,9 @@ public class PlayerScript : MonoBehaviour
 
         // Reset the death state in the Animator
         animator.SetBool("IsDead", false);
-        isDead = false;
-
- 
+        isDead = false; 
     }
+	
     //Enables input on startup
     private void OnEnable()
     {
