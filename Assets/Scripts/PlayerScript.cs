@@ -27,11 +27,20 @@ public class PlayerScript : MonoBehaviour
     private float horizontal;
     private bool isFacingRight = true;
     private bool isDead;
-    
+    public Score ScoreScript;//Reference to the collectable script so that we drop stars on death
 
     //sets everything as game starts up
     void Awake()
     {
+        if (ScoreScript != null)
+        {
+            Debug.Log("ScoreScript referenced properly.");
+        }
+        else
+        {
+            Debug.LogError("Script reference is not found on the target GameObject!");
+        }
+
         input = new PlayerInput(); //initializes input
         rbody = GetComponent<Rigidbody2D>();
         collider = GetComponent<CapsuleCollider2D>();
@@ -43,6 +52,7 @@ public class PlayerScript : MonoBehaviour
         {
             Debug.LogError("Animator component is missing from the GameObject.");
         }
+
     }
 
     void Update()
@@ -83,7 +93,7 @@ public class PlayerScript : MonoBehaviour
         if (input.Control.Quit.triggered)
 		{
 			Application.Quit();
-			Application.Quit();
+			Application.Quit(); //Why twice?
 		}
     }
     private void move()
@@ -127,6 +137,10 @@ public class PlayerScript : MonoBehaviour
         // Trigger the death animation
         animator.SetBool("IsDead", true);
         isDead = true;
+
+        //Drop any items you collected
+        ScoreScript.ActivateResetStars();
+
 
         // Disable player controls to prevent movement during death
         input.Disable();

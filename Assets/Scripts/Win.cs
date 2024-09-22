@@ -8,7 +8,8 @@ public class Win : MonoBehaviour
     public GameObject youWin;
 	public SpriteRenderer sprites;
 	public Sprite newSprite;
-    
+	private Score ScoreScript;
+
 	void Awake()
 	{
 		sprites = GetComponent<SpriteRenderer>();
@@ -18,6 +19,7 @@ public class Win : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
 		{
+			ScoreScript.TransferPending();
 			other.gameObject.SetActive(false);
 			sprites.sprite = newSprite;
 			StartCoroutine(WaitForMenu(2f));

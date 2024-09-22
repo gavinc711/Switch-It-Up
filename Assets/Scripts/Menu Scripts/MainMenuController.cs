@@ -12,7 +12,7 @@ public class MainMenuController : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Tutorial");  //Was loading the wrong scene, so I made it load tutorial instead (did it by name, sorry!)
     }
 
     public void Settings()
