@@ -18,7 +18,6 @@ public class Win : MonoBehaviour
         GameObject foundGameObject = GameObject.Find("ScoreTracker");
         if (foundGameObject != null)
         {
-            // Get the MyScript component from the found GameObject
             ScoreScript = foundGameObject.GetComponent<Score>();
 
             if (ScoreScript != null)

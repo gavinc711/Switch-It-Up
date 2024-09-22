@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -32,14 +33,19 @@ public class PlayerScript : MonoBehaviour
     //sets everything as game starts up
     void Awake()
     {
-        //if (ScoreScript != null)
-        //{
-        //    Debug.Log("ScoreScript referenced properly.");
-        //}
-        //else
-        //{
-        //    Debug.LogError("Script reference is not found on the target GameObject!");
-        //}
+        GameObject targetObject = GameObject.Find("ScoreTracker"); // Replace with the actual GameObject name
+        if (targetObject != null)
+        {
+            ScoreScript = targetObject.GetComponent<Score>();
+        }
+        if (ScoreScript != null)
+        {
+            Debug.Log("Player found score script.");
+        }
+        else
+        {
+            Debug.LogError("script reference is not found on the target gameobject!");
+        }
 
         input = new PlayerInput(); //initializes input
         rbody = GetComponent<Rigidbody2D>();
@@ -53,6 +59,7 @@ public class PlayerScript : MonoBehaviour
             Debug.LogError("Animator component is missing from the GameObject.");
         }
 
+        ScoreScript.Regen();
     }
 
     void Update()

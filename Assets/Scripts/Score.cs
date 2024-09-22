@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 using UnityEngine;
@@ -30,13 +31,8 @@ public class Score : MonoBehaviour
         {
             Destroy(gameObject);
         }
-         temp1 = "empty";
-         temp2 = "empty";
-         temp3 = "empty";
-        GameObject Star1 = GameObject.Find("Star 1");
-        GameObject Star2 = GameObject.Find("Star 2");
-        GameObject Star3 = GameObject.Find("Star 3");
-        Debug.Log("Found the object: " + Star2.name);
+
+        //Regen();
     }
 
     // Method to check if a collectable has been collected
@@ -62,18 +58,20 @@ public class Score : MonoBehaviour
     {
 
         Debug.Log("Collected " + id + ", storing the data for goal");
-        Debug.Log("Pending Collect says: temp1 = " + temp1);
-        Debug.Log("Pending Collect says: temp2 = " + temp2);
-        Debug.Log("Pending Collect says: temp3 = " + temp3);
+        //Debug.Log("Pending Collect says: temp1 = " + temp1);
+        //Debug.Log("Pending Collect says: temp2 = " + temp2);
+        //Debug.Log("Pending Collect says: temp3 = " + temp3);
         if (temp1 == "empty")
         {
             temp1 = id;
             Debug.Log("Pending Collect says: temp1 = " + temp1);
+            return;
         }
         else if (temp2 == "empty")
         {
             temp2 = id;
             Debug.Log("Pending Collect says: temp2 = " + temp2);
+            return;
         }
         else
         {
@@ -129,5 +127,18 @@ public class Score : MonoBehaviour
         // Optionally destroy or deactivate the collectable
         Debug.Log("Collected: " + tempID);
 
+    }
+    public void Regen()
+    {
+        Debug.LogWarning("Regenerated!");
+        temp1 = "empty";
+        temp2 = "empty";
+        temp3 = "empty";
+        Star1 = GameObject.Find("Star 1");
+        Star2 = GameObject.Find("Star 2");
+        Star3 = GameObject.Find("Star 3");
+        //Debug.Log("Found the object: " + Star1.name);
+        //Debug.Log("Found the object: " + Star2.name);
+        //Debug.Log("Found the object: " + Star3.name);
     }
 }

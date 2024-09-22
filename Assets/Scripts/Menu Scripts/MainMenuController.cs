@@ -14,6 +14,10 @@ public class MainMenuController : MonoBehaviour
     {
         SceneManager.LoadScene("Tutorial");  //Was loading the wrong scene, so I made it load tutorial instead (did it by name, sorry!)
     }
+    public void PlayGame2()
+    {
+        SceneManager.LoadScene("TunnelVision");
+    }
 
     public void Settings()
     {

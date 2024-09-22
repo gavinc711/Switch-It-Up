@@ -23,7 +23,7 @@ public class Collectable : MonoBehaviour
         // Check if the script reference is assigned
         if (ScoreScript != null)
         {
-            Debug.Log("Script referenced properly.");
+            Debug.Log("Collectable found score script");
         }
         else
         {
