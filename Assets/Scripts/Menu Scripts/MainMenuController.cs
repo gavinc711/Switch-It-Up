@@ -9,6 +9,7 @@ public class MainMenuController : MonoBehaviour
     public GameObject settings;
     public GameObject credits;
     public GameObject controls;
+    public GameObject lvls;
 
     public void PlayGame()
     {
@@ -66,6 +67,11 @@ public class MainMenuController : MonoBehaviour
     public void RestartGame() 
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void OpenLvlSelect()
+    {
+        lvls.gameObject.SetActive(true);
     }
 	
 	public void Tutorial() 
