@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,11 +10,31 @@ public class Win : MonoBehaviour
 	public SpriteRenderer sprites;
 	public Sprite newSprite;
 	private Score ScoreScript;
-
-	void Awake()
+    void Awake()
 	{
-		sprites = GetComponent<SpriteRenderer>();
-	}
+        
+        sprites = GetComponent<SpriteRenderer>();
+
+        GameObject foundGameObject = GameObject.Find("ScoreTracker");
+        if (foundGameObject != null)
+        {
+            // Get the MyScript component from the found GameObject
+            ScoreScript = foundGameObject.GetComponent<Score>();
+
+            if (ScoreScript != null)
+            {
+                Debug.Log("Win got score script");
+            }
+            else
+            {
+                Debug.LogError("MyScript component not found on the found GameObject!");
+            }
+        }
+        else
+        {
+            Debug.LogError("GameObject with the specified name not found!");
+        }
+    }
 	
     void OnTriggerEnter2D(Collider2D other)
     {

@@ -18,7 +18,8 @@ public class CollectableIDAssigner : MonoBehaviour
         for (int i = 0; i < collectables.Length; i++)
         {
             collectables[i].collectableID = levelName + "_Star" + (i + 1);
-            Debug.Log("Assigned ID: " + collectables[i].collectableID);
+            Debug.Log("Assigned ID: " + collectables[i].collectableID + ", i = " + i);
+            
         }
     }
 }

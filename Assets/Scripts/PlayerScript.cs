@@ -32,14 +32,14 @@ public class PlayerScript : MonoBehaviour
     //sets everything as game starts up
     void Awake()
     {
-        if (ScoreScript != null)
-        {
-            Debug.Log("ScoreScript referenced properly.");
-        }
-        else
-        {
-            Debug.LogError("Script reference is not found on the target GameObject!");
-        }
+        //if (ScoreScript != null)
+        //{
+        //    Debug.Log("ScoreScript referenced properly.");
+        //}
+        //else
+        //{
+        //    Debug.LogError("Script reference is not found on the target GameObject!");
+        //}
 
         input = new PlayerInput(); //initializes input
         rbody = GetComponent<Rigidbody2D>();

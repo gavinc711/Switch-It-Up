@@ -87,18 +87,17 @@ public class Score : MonoBehaviour
     }
     public void ResetStars()
     {
-        Debug.Log("this worked 1, temp1 = " + temp1);
-        Debug.Log("Found the object: " + Star1.name);
+        //Debug.Log("this worked 1, temp1 = " + temp1);
+        //Debug.Log("Found the object: " + Star1.name);
         Star1.SetActive(true);
         temp1 = "empty";
 
-        Debug.Log("this worked 2, temp2 = " + temp2);
+        //Debug.Log("this worked 2, temp2 = " + temp2);
         //Debug.Log("Found the object: " + Star2.name);
-
-        Star1.SetActive(true);
+        Star2.SetActive(true);
         temp2 = "empty";
 
-        Debug.Log("this worked 3, temp3 = " + temp3);
+       // Debug.Log("this worked 3, temp3 = " + temp3);
         Star3.SetActive(true);
         temp3 = "empty";
     }
