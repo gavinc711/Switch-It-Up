@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CollectableIDAssigner : MonoBehaviour
@@ -14,6 +15,7 @@ public class CollectableIDAssigner : MonoBehaviour
     void AssignCollectableIDs()
     {
         Collectable[] collectables = FindObjectsOfType<Collectable>();
+        collectables = collectables.OrderBy(collectable => collectable.gameObject.name).ToArray();
 
         for (int i = 0; i < collectables.Length; i++)
         {
