@@ -95,13 +95,6 @@ public class PlayerScript : MonoBehaviour
             if(isDead == false)
 			    death();
 		}
-
-        //If any quit button is pressed, for debug purposes
-        if (input.Control.Quit.triggered)
-		{
-			Application.Quit();
-			Application.Quit(); //Why twice?
-		}
     }
     private void move()
     {
