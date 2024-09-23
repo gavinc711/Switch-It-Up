@@ -13,17 +13,17 @@ public class MainMenuController : MonoBehaviour
     public GameObject controls;
     public GameObject lvls;
 
-    public void PlayGame()
-    {
-        SceneManager.LoadScene("Tutorial");  //Was loading the wrong scene, so I made it load tutorial instead (did it by name, sorry!)
-    }
+    public int currentSceneIndex;
+    public int nextSceneIndex;
+
+    
     public void PlayGame2()
     {
         // Get the current scene index
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
         // Calculate the next scene index
-        int nextSceneIndex = currentSceneIndex + 1;
+        nextSceneIndex = currentSceneIndex + 1;
 
         // Check if the next scene index is within the valid range of scenes in the build settings
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
@@ -75,7 +75,7 @@ public class MainMenuController : MonoBehaviour
     {
         lvls.gameObject.SetActive(true);
     }
-	
+
 	public void Tutorial() 
     {
         SceneManager.LoadScene(1);

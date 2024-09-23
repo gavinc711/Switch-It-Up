@@ -6,7 +6,11 @@ using UnityEngine.SceneManagement;
 public class LVLSelect : MonoBehaviour
 {
     // Start is called before the first frame update
-   public void Lvl1() 
+    public void Tutorial() 
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void Lvl1() 
     {
         SceneManager.LoadScene(2);
     }
