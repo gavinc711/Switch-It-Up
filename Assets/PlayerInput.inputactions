@@ -31,15 +31,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Quit",
-                    "type": "Button",
-                    "id": "99ab9a9c-1307-485d-9bc1-329202600885",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -79,7 +70,7 @@
                 {
                     "name": "Left",
                     "id": "451d466c-bb83-436c-9564-9827673defa2",
-                    "path": "<Keyboard>/leftArrow",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -90,7 +81,7 @@
                 {
                     "name": "Right",
                     "id": "70235f0a-ce74-4eca-8ca6-c0d33bc9aaf6",
-                    "path": "<Keyboard>/rightArrow",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -122,28 +113,6 @@
                 },
                 {
                     "name": "",
-                    "id": "d3285986-7521-430f-8067-96996bcf41b0",
-                    "path": "<Gamepad>/select",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Quit",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "9d3bd42d-857a-4723-893f-45fb9cd8c1ba",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Quit",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "ee2d178f-aa75-4ee9-ae2c-2757d8bbfab7",
                     "path": "<Gamepad>/start",
                     "interactions": "",
@@ -156,70 +125,11 @@
                 {
                     "name": "",
                     "id": "2d3537f0-6a0a-4959-919b-f652a6a9a398",
-                    "path": "<Keyboard>/enter",
+                    "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Menu",
-            "id": "ab721303-c793-4610-bdbe-da43ebd238d6",
-            "actions": [
-                {
-                    "name": "Movement",
-                    "type": "Value",
-                    "id": "c262d383-dff7-411e-bb30-ddef987b8039",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
-                },
-                {
-                    "name": "Select",
-                    "type": "Button",
-                    "id": "e226311f-e9cb-4cfe-86e2-9751a6566980",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "b5b2a167-7bc8-4940-84f3-8c89a9dbfe99",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "faa4d40a-dc7e-4257-bacd-f0cf6174958c",
-                    "path": "<Gamepad>/dpad",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "29ce930f-9c3d-4b78-8ee7-9757052746ee",
-                    "path": "<Gamepad>/buttonSouth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Select",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

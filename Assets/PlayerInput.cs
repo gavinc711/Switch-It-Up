@@ -53,15 +53,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Quit"",
-                    ""type"": ""Button"",
-                    ""id"": ""99ab9a9c-1307-485d-9bc1-329202600885"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -101,7 +92,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Left"",
                     ""id"": ""451d466c-bb83-436c-9564-9827673defa2"",
-                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -112,7 +103,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Right"",
                     ""id"": ""70235f0a-ce74-4eca-8ca6-c0d33bc9aaf6"",
-                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -144,28 +135,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""d3285986-7521-430f-8067-96996bcf41b0"",
-                    ""path"": ""<Gamepad>/select"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Quit"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""9d3bd42d-857a-4723-893f-45fb9cd8c1ba"",
-                    ""path"": ""<Keyboard>/escape"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Quit"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""ee2d178f-aa75-4ee9-ae2c-2757d8bbfab7"",
                     ""path"": ""<Gamepad>/start"",
                     ""interactions"": """",
@@ -178,70 +147,11 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""2d3537f0-6a0a-4959-919b-f652a6a9a398"",
-                    ""path"": ""<Keyboard>/enter"",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Pause"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""Menu"",
-            ""id"": ""ab721303-c793-4610-bdbe-da43ebd238d6"",
-            ""actions"": [
-                {
-                    ""name"": ""Movement"",
-                    ""type"": ""Value"",
-                    ""id"": ""c262d383-dff7-411e-bb30-ddef987b8039"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""Select"",
-                    ""type"": ""Button"",
-                    ""id"": ""e226311f-e9cb-4cfe-86e2-9751a6566980"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""b5b2a167-7bc8-4940-84f3-8c89a9dbfe99"",
-                    ""path"": ""<Gamepad>/leftStick"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""faa4d40a-dc7e-4257-bacd-f0cf6174958c"",
-                    ""path"": ""<Gamepad>/dpad"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Movement"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""29ce930f-9c3d-4b78-8ee7-9757052746ee"",
-                    ""path"": ""<Gamepad>/buttonSouth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Select"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -255,11 +165,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Control_Movement = m_Control.FindAction("Movement", throwIfNotFound: true);
         m_Control_Jump = m_Control.FindAction("Jump", throwIfNotFound: true);
         m_Control_Pause = m_Control.FindAction("Pause", throwIfNotFound: true);
-        m_Control_Quit = m_Control.FindAction("Quit", throwIfNotFound: true);
-        // Menu
-        m_Menu = asset.FindActionMap("Menu", throwIfNotFound: true);
-        m_Menu_Movement = m_Menu.FindAction("Movement", throwIfNotFound: true);
-        m_Menu_Select = m_Menu.FindAction("Select", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -324,7 +229,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Control_Movement;
     private readonly InputAction m_Control_Jump;
     private readonly InputAction m_Control_Pause;
-    private readonly InputAction m_Control_Quit;
     public struct ControlActions
     {
         private @PlayerInput m_Wrapper;
@@ -332,7 +236,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Movement => m_Wrapper.m_Control_Movement;
         public InputAction @Jump => m_Wrapper.m_Control_Jump;
         public InputAction @Pause => m_Wrapper.m_Control_Pause;
-        public InputAction @Quit => m_Wrapper.m_Control_Quit;
         public InputActionMap Get() { return m_Wrapper.m_Control; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -351,9 +254,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Pause.started += instance.OnPause;
             @Pause.performed += instance.OnPause;
             @Pause.canceled += instance.OnPause;
-            @Quit.started += instance.OnQuit;
-            @Quit.performed += instance.OnQuit;
-            @Quit.canceled += instance.OnQuit;
         }
 
         private void UnregisterCallbacks(IControlActions instance)
@@ -367,9 +267,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Pause.started -= instance.OnPause;
             @Pause.performed -= instance.OnPause;
             @Pause.canceled -= instance.OnPause;
-            @Quit.started -= instance.OnQuit;
-            @Quit.performed -= instance.OnQuit;
-            @Quit.canceled -= instance.OnQuit;
         }
 
         public void RemoveCallbacks(IControlActions instance)
@@ -387,70 +284,10 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         }
     }
     public ControlActions @Control => new ControlActions(this);
-
-    // Menu
-    private readonly InputActionMap m_Menu;
-    private List<IMenuActions> m_MenuActionsCallbackInterfaces = new List<IMenuActions>();
-    private readonly InputAction m_Menu_Movement;
-    private readonly InputAction m_Menu_Select;
-    public struct MenuActions
-    {
-        private @PlayerInput m_Wrapper;
-        public MenuActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_Menu_Movement;
-        public InputAction @Select => m_Wrapper.m_Menu_Select;
-        public InputActionMap Get() { return m_Wrapper.m_Menu; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(MenuActions set) { return set.Get(); }
-        public void AddCallbacks(IMenuActions instance)
-        {
-            if (instance == null || m_Wrapper.m_MenuActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_MenuActionsCallbackInterfaces.Add(instance);
-            @Movement.started += instance.OnMovement;
-            @Movement.performed += instance.OnMovement;
-            @Movement.canceled += instance.OnMovement;
-            @Select.started += instance.OnSelect;
-            @Select.performed += instance.OnSelect;
-            @Select.canceled += instance.OnSelect;
-        }
-
-        private void UnregisterCallbacks(IMenuActions instance)
-        {
-            @Movement.started -= instance.OnMovement;
-            @Movement.performed -= instance.OnMovement;
-            @Movement.canceled -= instance.OnMovement;
-            @Select.started -= instance.OnSelect;
-            @Select.performed -= instance.OnSelect;
-            @Select.canceled -= instance.OnSelect;
-        }
-
-        public void RemoveCallbacks(IMenuActions instance)
-        {
-            if (m_Wrapper.m_MenuActionsCallbackInterfaces.Remove(instance))
-                UnregisterCallbacks(instance);
-        }
-
-        public void SetCallbacks(IMenuActions instance)
-        {
-            foreach (var item in m_Wrapper.m_MenuActionsCallbackInterfaces)
-                UnregisterCallbacks(item);
-            m_Wrapper.m_MenuActionsCallbackInterfaces.Clear();
-            AddCallbacks(instance);
-        }
-    }
-    public MenuActions @Menu => new MenuActions(this);
     public interface IControlActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
-        void OnQuit(InputAction.CallbackContext context);
-    }
-    public interface IMenuActions
-    {
-        void OnMovement(InputAction.CallbackContext context);
-        void OnSelect(InputAction.CallbackContext context);
     }
 }
