@@ -1375,7 +1375,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4536572242449290108, guid: 62ad35c2cab58df49a3b29de9b0bcd76, type: 3}
       propertyPath: m_Name
-      value: star1 (1)
+      value: Star 3
       objectReference: {fileID: 0}
     - target: {fileID: 6297325497660374206, guid: 62ad35c2cab58df49a3b29de9b0bcd76, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1995,9 +1995,47 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths: []
+  m_ColliderPaths:
+  - m_Collider: {fileID: 688901001}
+    m_ColliderPaths:
+    - - X: 446300000
+        Y: 120000000
+      - X: 443600000
+        Y: 120000000
+      - X: 443600000
+        Y: 30000000
+      - X: 446300000
+        Y: 30000000
+    - - X: 456300000
+        Y: 120000000
+      - X: 453600000
+        Y: 120000000
+      - X: 453600000
+        Y: 30000000
+      - X: 456300000
+        Y: 30000000
+    - - X: 466300000
+        Y: 10000000
+      - X: 463600000
+        Y: 10000000
+      - X: 463600000
+        Y: -70000000
+      - X: 466300000
+        Y: -70000000
   m_CompositePaths:
-    m_Paths: []
+    m_Paths:
+    - - {x: 45.62997, y: 3}
+      - {x: 45.62997, y: 12}
+      - {x: 45.36, y: 11.99997}
+      - {x: 45.36003, y: 3}
+    - - {x: 44.62997, y: 3}
+      - {x: 44.62997, y: 12}
+      - {x: 44.36, y: 11.99997}
+      - {x: 44.36003, y: 3}
+    - - {x: 46.62997, y: -7}
+      - {x: 46.62997, y: 1}
+      - {x: 46.36, y: 0.99997073}
+      - {x: 46.36003, y: -7}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
@@ -2060,7 +2098,7 @@ TilemapCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
@@ -3490,7 +3528,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 4
-      m_TileSpriteIndex: 10
+      m_TileSpriteIndex: 13
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -3680,7 +3718,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 5
-      m_TileSpriteIndex: 7
+      m_TileSpriteIndex: 10
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -4073,20 +4111,20 @@ Tilemap:
     m_Data: {fileID: -1694773197, guid: 988330521ac25994091166d4566e324c, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 1845189354, guid: 988330521ac25994091166d4566e324c, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 3
     m_Data: {fileID: -429510107, guid: cbc00645d1ad62640aaf6f4254921e76, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: -1350092182, guid: 988330521ac25994091166d4566e324c, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -438307677, guid: cbc00645d1ad62640aaf6f4254921e76, type: 3}
+    m_Data: {fileID: 1845189354, guid: 988330521ac25994091166d4566e324c, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -1551912042, guid: cbc00645d1ad62640aaf6f4254921e76, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 1612825656, guid: cbc00645d1ad62640aaf6f4254921e76, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -438307677, guid: cbc00645d1ad62640aaf6f4254921e76, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 100
     m_Data:
@@ -4612,7 +4650,9 @@ CompositeCollider2D:
   m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths: []
+  m_ColliderPaths:
+  - m_Collider: {fileID: 1334067545}
+    m_ColliderPaths: []
   m_CompositePaths:
     m_Paths: []
   m_VertexDistance: 0.0005
@@ -4677,7 +4717,7 @@ TilemapCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
@@ -42033,7 +42073,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4536572242449290108, guid: 62ad35c2cab58df49a3b29de9b0bcd76, type: 3}
       propertyPath: m_Name
-      value: star1
+      value: Star 1
       objectReference: {fileID: 0}
     - target: {fileID: 6297325497660374206, guid: 62ad35c2cab58df49a3b29de9b0bcd76, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43479,7 +43519,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4536572242449290108, guid: 62ad35c2cab58df49a3b29de9b0bcd76, type: 3}
       propertyPath: m_Name
-      value: star1 (2)
+      value: Star 2
       objectReference: {fileID: 0}
     - target: {fileID: 6297325497660374206, guid: 62ad35c2cab58df49a3b29de9b0bcd76, type: 3}
       propertyPath: m_LocalPosition.x
@@ -43545,8 +43585,8 @@ SceneRoots:
   - {fileID: 651155422}
   - {fileID: 1777569423}
   - {fileID: 1692368176}
-  - {fileID: 608798533}
   - {fileID: 2074744580}
+  - {fileID: 608798533}
   - {fileID: 629003910}
   - {fileID: 1223211000}
   - {fileID: 1841147726}
