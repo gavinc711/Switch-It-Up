@@ -30,6 +30,6 @@ EditorBuildSettings:
     path: Assets/Scenes/CrimsonClimb.unity
     guid: dec99235946c8304fa542be48028e1c5
   - enabled: 0
-    path: Assets/Scenes/Twinkle.unity
+    path: Assets/Scenes/Level_1112_Twinkle.unity
     guid: 1986fe068a803a048ab151019f82c67b
   m_configObjects: {}
