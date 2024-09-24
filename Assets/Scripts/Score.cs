@@ -85,9 +85,7 @@ public class Score : MonoBehaviour
     }
     public void ResetStars()
     {
-        temp3 = "empty";
-        temp2 = "empty";
-        temp1 = "empty";
+        
         //Debug.Log("this worked 1, temp1 = " + temp1);
         //Debug.Log("Found the object: " + Star1.name);
         Star1.SetActive(true);
@@ -98,6 +96,9 @@ public class Score : MonoBehaviour
         
        // Debug.Log("this worked 3, temp3 = " + temp3);
         Star3.SetActive(true);
+        temp3 = "empty";
+        temp2 = "empty";
+        temp1 = "empty";
     }
 
     public void TransferPending()
