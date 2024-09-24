@@ -85,7 +85,7 @@ public class MainMenuController : MonoBehaviour
         }
         if (ScoreScript != null)
         {
-            Debug.Log("Player found score script.");
+            //Debug.Log("Player found score script.");
         }
         else
         {

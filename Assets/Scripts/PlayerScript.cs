@@ -139,7 +139,7 @@ public class PlayerScript : MonoBehaviour
         isDead = true;
 
         //Drop any items you collected
-        ScoreScript.ActivateResetStars();
+        
 
 
         // Disable player controls to prevent movement during death
@@ -171,7 +171,8 @@ public class PlayerScript : MonoBehaviour
 
         // Reset the death state in the Animator
         animator.SetBool("IsDead", false);
-        isDead = false; 
+        isDead = false;
+        ScoreScript.ActivateResetStars();
     }
 	
     //Enables input on startup

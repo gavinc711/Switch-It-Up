@@ -10,7 +10,7 @@ public class Win : MonoBehaviour
 	public Sprite newSprite;
 	private Score ScoreScript;
     private Animator animator;
-    private bool won = false;
+    //private bool won = false;
     
 	void Awake()
 	{
@@ -42,7 +42,7 @@ public class Win : MonoBehaviour
         if(other.gameObject.tag == "Player")
 		{
             animator.SetBool("Won", true);
-            won = true;
+            //won = true;
             ScoreScript.TransferPending();
 			other.gameObject.SetActive(false);
 			//sprites.sprite = newSprite;

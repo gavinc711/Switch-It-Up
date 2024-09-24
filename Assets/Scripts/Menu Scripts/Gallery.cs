@@ -35,56 +35,56 @@ public class Gallery : MonoBehaviour
             Debug.LogError("script reference is not found on the target gameobject!");
         }
     }
-    //public void party()
-    //{
-        
-    //    partyImage.gameObject.SetActive(true);
-    //}
+    public void party()
+    {
 
-    // public void alien()
-    //{
-    //    alienImage.gameObject.SetActive(true);
-    //}
+        partyImage.gameObject.SetActive(true);
+    }
 
-    //public void golf()
-    //{
-    //    golfImage.gameObject.SetActive(true);
-    //}
+    public void alien()
+    {
+        alienImage.gameObject.SetActive(true);
+    }
 
-    ///* public void cs()
-    //{
-    //    csImage.gameObject.SetActive(true);
-    //} */
+    public void golf()
+    {
+        golfImage.gameObject.SetActive(true);
+    }
 
-    //public void concept()
-    //{
-    //    conceptImage.gameObject.SetActive(true);
-    //}
+    /* public void cs()
+    {
+        csImage.gameObject.SetActive(true);
+    } */
 
-    //public void purple()
-    //{
-    //    purpleImage.gameObject.SetActive(true);
-    //}
+    public void concept()
+    {
+        conceptImage.gameObject.SetActive(true);
+    }
 
-    //public void red()
-    //{
-    //    redImage.gameObject.SetActive(true);
-    //}
+    public void purple()
+    {
+        purpleImage.gameObject.SetActive(true);
+    }
 
-    //public void grey()
-    //{
-    //    greyImage.gameObject.SetActive(true);
-    //}
+    public void red()
+    {
+        redImage.gameObject.SetActive(true);
+    }
 
-    //public void green()
-    //{
-    //    greenImage.gameObject.SetActive(true);
-    //}
+    public void grey()
+    {
+        greyImage.gameObject.SetActive(true);
+    }
 
-    // public void blue()
-    //{
-    //    blueImage.gameObject.SetActive(true);
-    //}
+    public void green()
+    {
+        greenImage.gameObject.SetActive(true);
+    }
+
+    public void blue()
+    {
+        blueImage.gameObject.SetActive(true);
+    }
 
     public void Back()
     {
