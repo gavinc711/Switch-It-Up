@@ -6,18 +6,20 @@ using UnityEngine;
 public class Win : MonoBehaviour
 {
     public GameObject youWin;
+    public GameObject comet;
 	public SpriteRenderer sprites;
 	public Sprite newSprite;
 	private Score ScoreScript;
     private Animator animator;
+    private Animator cometAnimator;
     public AudioClip winSound;
     //private bool won = false;
 
     void Awake()
 	{
         animator = GetComponent<Animator>();
-        //sprites = GetComponent<SpriteRenderer>();
 
+        GameObject cometGameObject = GameObject.Find("Comet");
         GameObject foundGameObject = GameObject.Find("ScoreTracker");
         if (foundGameObject != null)
         {
@@ -36,6 +38,26 @@ public class Win : MonoBehaviour
         {
             Debug.LogError("GameObject with the specified name not found!");
         }
+
+        if (cometGameObject != null)
+        {
+            cometAnimator = cometGameObject.GetComponent<Animator>();
+
+            if (ScoreScript != null)
+            {
+                Debug.Log("Win got score script");
+            }
+            else
+            {
+                Debug.LogError("MyScript component not found on the found GameObject!");
+            }
+        }
+        else
+        {
+            Debug.LogError("GameObject with the specified name not found!");
+        }
+
+        comet.SetActive(false);
     }
 	
     void OnTriggerEnter2D(Collider2D other)
@@ -43,6 +65,8 @@ public class Win : MonoBehaviour
         if(other.gameObject.tag == "Player")
 		{
             animator.SetBool("Won", true);
+            comet.SetActive(true);
+            cometAnimator.SetBool("Won", true);
             //won = true;
             ScoreScript.TransferPending();
 			other.gameObject.SetActive(false);
