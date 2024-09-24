@@ -14,7 +14,11 @@ public class PauseM : MonoBehaviour
     public GameObject controls;
 	public GameObject overhead;
 
-     public void Resume()
+    private void Start()
+    {
+        Resume();
+    }
+    public void Resume()
     {
         pause.SetActive(false);
         Time.timeScale = 1f;
@@ -26,6 +30,7 @@ public class PauseM : MonoBehaviour
         if (controls.activeSelf)
             controls.SetActive(false);
     }
+
 
     public void Paused()
     {
