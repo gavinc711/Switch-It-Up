@@ -1480,7 +1480,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 654675948}
+      - m_Target: {fileID: 1646265546}
         m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
         m_MethodName: BackToMain
         m_Mode: 1
@@ -1878,7 +1878,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 654675948}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
         m_MethodName: BackToMain
         m_Mode: 1
@@ -4066,7 +4066,7 @@ GameObject:
   - component: {fileID: 460894762}
   - component: {fileID: 460894761}
   m_Layer: 5
-  m_Name: Button
+  m_Name: partyLock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4388,7 +4388,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 654675948}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
         m_MethodName: BackToSettings
         m_Mode: 1
@@ -4861,7 +4861,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 654675948}
+      - m_Target: {fileID: 1646265546}
         m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
         m_MethodName: Credits
         m_Mode: 1
@@ -5284,7 +5284,6 @@ GameObject:
   - component: {fileID: 654675947}
   - component: {fileID: 654675946}
   - component: {fileID: 654675945}
-  - component: {fileID: 654675948}
   m_Layer: 5
   m_Name: PlayButton
   m_TagString: Untagged
@@ -5355,9 +5354,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 654675948}
+      - m_Target: {fileID: 1646265546}
         m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
-        m_MethodName: OpenLvlSelect
+        m_MethodName: PlayGame2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5405,26 +5404,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654675943}
   m_CullTransparentMesh: 1
---- !u!114 &654675948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 654675943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de0af978eb1359b4ab26cf08993b481b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  settings: {fileID: 800004610}
-  extras: {fileID: 1140073523}
-  controls: {fileID: 1512145054}
-  credits: {fileID: 1228337022}
-  gallery: {fileID: 853557896}
-  lvls: {fileID: 432552966}
-  currentSceneIndex: 0
-  nextSceneIndex: 0
 --- !u!1 &655248205
 GameObject:
   m_ObjectHideFlags: 0
@@ -5846,7 +5825,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 654675948}
+      - m_Target: {fileID: 1646265546}
         m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
         m_MethodName: Settings
         m_Mode: 1
@@ -5978,7 +5957,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 654675948}
+      - m_Target: {fileID: 1646265546}
         m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
         m_MethodName: Gallery
         m_Mode: 1
@@ -6929,7 +6908,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &853557897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10226,7 +10205,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 654675948}
+      - m_Target: {fileID: 1646265546}
         m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
         m_MethodName: BackToExtras
         m_Mode: 1
@@ -11473,6 +11452,26 @@ MonoBehaviour:
   credits: {fileID: 1228337022}
   gallery: {fileID: 853557896}
   lvls: {fileID: 432552966}
+  ScoreScript: {fileID: 585064225}
+  partyImage: {fileID: 1917210465}
+  alienImage: {fileID: 107114095}
+  golfImage: {fileID: 1992028809}
+  conceptImage: {fileID: 766132879}
+  unlock: {fileID: 606952087}
+  purpleImage: {fileID: 655248205}
+  redImage: {fileID: 1795474330}
+  grayImage: {fileID: 1060842002}
+  greenImage: {fileID: 1628198302}
+  blueImage: {fileID: 601748324}
+  partyLock: {fileID: 460894759}
+  conceptLock: {fileID: 866001312}
+  alienLock: {fileID: 332186770}
+  golfLock: {fileID: 700221747}
+  purpleLock: {fileID: 299316031}
+  redLock: {fileID: 1742267742}
+  grayLock: {fileID: 1331602068}
+  greenLock: {fileID: 1347224541}
+  blueLock: {fileID: 1965058873}
   currentSceneIndex: 0
   nextSceneIndex: 0
 --- !u!1 &1737316656
@@ -11994,7 +11993,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 654675948}
+      - m_Target: {fileID: 1646265546}
         m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
         m_MethodName: Extras
         m_Mode: 1
@@ -13616,7 +13615,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 654675948}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
         m_MethodName: Controls
         m_Mode: 1
@@ -14091,7 +14090,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 654675948}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
         m_MethodName: BackToExtras
         m_Mode: 1
@@ -14208,7 +14207,7 @@ MonoBehaviour:
   greyImage: {fileID: 396897988}
   greenImage: {fileID: 404422817}
   blueImage: {fileID: 2106770873}
-  ScoreScript: {fileID: 0}
+  ScoreScript: {fileID: 585064225}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
