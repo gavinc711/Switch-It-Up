@@ -34,4 +34,10 @@ public class PauseM : MonoBehaviour
         GameIsPaused = true;
         overhead.SetActive(false);
     }
+
+    public void BackToPause()
+    {
+        settings.SetActive(false);
+        pause.SetActive(true);
+    }
 }

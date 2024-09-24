@@ -2876,6 +2876,18 @@ PrefabInstance:
       propertyPath: m_fontColor.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7635796179680856170, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1859439423}
+    - target: {fileID: 7635796179680856170, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackToPause
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635796179680856170, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseM, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8392892383182037426, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
       propertyPath: stars
       value: 
@@ -2928,6 +2940,7 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 3937652817751008465, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
     - {fileID: 4179652048516795492, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
+    - {fileID: 6835193835793478964, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
@@ -41954,7 +41967,8 @@ PrefabInstance:
       propertyPath: platformLayer.m_Bits
       value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7175411863571547679, guid: 2a13a6ec24e94d44ebf7c4a6e3433a3c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -41983,7 +41997,7 @@ MonoBehaviour:
   settings: {fileID: 1063735837}
   pause: {fileID: 1063735838}
   controls: {fileID: 1063735836}
-  overhead: {fileID: 0}
+  overhead: {fileID: 2101344315}
 --- !u!1 &1941106355
 GameObject:
   m_ObjectHideFlags: 0
@@ -43173,6 +43187,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6297325497660374206, guid: 62ad35c2cab58df49a3b29de9b0bcd76, type: 3}
   m_PrefabInstance: {fileID: 2074744580}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2101344315 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4919826790882982375, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
+  m_PrefabInstance: {fileID: 1063735835}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

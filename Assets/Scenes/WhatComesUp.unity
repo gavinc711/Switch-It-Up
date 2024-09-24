@@ -3284,7 +3284,7 @@ PrefabInstance:
     - target: {fileID: 8996662853202132350, guid: 2a13a6ec24e94d44ebf7c4a6e3433a3c, type: 3}
       propertyPath: pause
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 558552941}
     - target: {fileID: 8996662853202132350, guid: 2a13a6ec24e94d44ebf7c4a6e3433a3c, type: 3}
       propertyPath: respawn
       value: 
@@ -37966,6 +37966,10 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 3525420676756723975, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
+      propertyPath: lvls
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3811708278664386941, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -38013,6 +38017,18 @@ PrefabInstance:
     - target: {fileID: 4743956486836437740, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635796179680856170, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 558552941}
+    - target: {fileID: 7635796179680856170, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackToPause
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635796179680856170, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseM, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7771603278829246223, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
       propertyPath: m_IsActive
@@ -38082,6 +38098,8 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 8188664632611699836, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
     - {fileID: 4179652048516795492, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
+    - {fileID: 6835193835793478964, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
+    - {fileID: 6329776633149740134, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}

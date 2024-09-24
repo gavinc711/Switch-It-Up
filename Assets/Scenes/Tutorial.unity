@@ -710,7 +710,7 @@ Transform:
   m_GameObject: {fileID: 426543870}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -478.98376, y: -335.56714, z: -7.7136736}
+  m_LocalPosition: {x: -480.1508, y: -335.56714, z: -7.7136736}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1387,7 +1387,7 @@ PrefabInstance:
     - target: {fileID: 8996662853202132350, guid: 2a13a6ec24e94d44ebf7c4a6e3433a3c, type: 3}
       propertyPath: pause
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1633298248}
     - target: {fileID: 8996662853202132350, guid: 2a13a6ec24e94d44ebf7c4a6e3433a3c, type: 3}
       propertyPath: speed
       value: 5
@@ -2035,9 +2035,25 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: RestartGame
       objectReference: {fileID: 0}
+    - target: {fileID: 7635796179680856170, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1633298248}
+    - target: {fileID: 7635796179680856170, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackToPause
+      objectReference: {fileID: 0}
+    - target: {fileID: 7635796179680856170, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseM, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7771603278829246223, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7794062044582012846, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7988860111809869022, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
       propertyPath: m_IsActive
@@ -2098,8 +2114,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8188664632611699836, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
-    - {fileID: 4179652048516795492, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
     - {fileID: 4919826790882982375, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
+    - {fileID: 6835193835793478964, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
+    - {fileID: 6329776633149740134, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8573951998133366073, guid: c6c6664874a6c9e45898c1cfdc0341be, type: 3}
       insertIndex: 0
