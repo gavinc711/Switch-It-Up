@@ -10,10 +10,12 @@ public class Win : MonoBehaviour
 	public SpriteRenderer sprites;
 	public Sprite newSprite;
 	private Score ScoreScript;
+    private Animator animator;
+    private bool won = false;
     void Awake()
 	{
-        
-        sprites = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+        //sprites = GetComponent<SpriteRenderer>();
 
         GameObject foundGameObject = GameObject.Find("ScoreTracker");
         if (foundGameObject != null)
@@ -39,9 +41,12 @@ public class Win : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
 		{
-			ScoreScript.TransferPending();
+            animator.SetBool("Won", true);
+            won = true;
+            ScoreScript.TransferPending();
 			other.gameObject.SetActive(false);
-			sprites.sprite = newSprite;
+			//sprites.sprite = newSprite;
+
 			StartCoroutine(WaitForMenu(2f));
 		}
     }

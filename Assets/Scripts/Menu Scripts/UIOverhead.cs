@@ -8,12 +8,25 @@ using TMPro;
 
 public class UIOverhead : MonoBehaviour
 {
-    public Score stars;//Reference to the collectable script so that we drop stars on death
+    private Score ScoreScript;//Reference to the collectable script so that we drop stars on death
     public TextMeshProUGUI lvlNameTxt;
     public TextMeshProUGUI ScoreTxt;
 
     void Start()
     {
+        GameObject targetObject = GameObject.Find("ScoreTracker");
+        if (targetObject != null)
+        {
+            ScoreScript = targetObject.GetComponent<Score>();
+        }
+        if (ScoreScript != null)
+        {
+            Debug.Log("Player found score script.");
+        }
+        else
+        {
+            Debug.LogError("script reference is not found on the target gameobject!");
+        }
         int current = SceneManager.GetActiveScene().buildIndex;
 
         if(current == 2)
@@ -37,8 +50,7 @@ public class UIOverhead : MonoBehaviour
             lvlNameTxt.text = "Level 5";
         }
 
-        stars.AddScore(stars.score);
-        ScoreTxt.text = "Score: " + stars.score.ToString();
+        ScoreTxt.text = "Score: " + ScoreScript.score.ToString();
     }
 
  
