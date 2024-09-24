@@ -81,13 +81,13 @@ public class PlayerScript : MonoBehaviour
             stageChange();
         }
 		
-		/*if (input.Control.Pause.triggered)
+		if (input.Control.Pause.triggered)
 		{
 			if(!pause.GameIsPaused)
 				pause.Paused();
 			else
 				pause.Resume();
-		}*/
+		}
 		
         //Check if player is touching death tile with respective layer
 		if (Physics2D.BoxCast(collider.bounds.center, collider.bounds.size, 0f, Vector2.down, .1f, deathLayer))

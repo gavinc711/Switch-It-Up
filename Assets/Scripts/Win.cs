@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Win : MonoBehaviour
 {
@@ -12,7 +11,8 @@ public class Win : MonoBehaviour
 	private Score ScoreScript;
     private Animator animator;
     private bool won = false;
-    void Awake()
+    
+	void Awake()
 	{
         animator = GetComponent<Animator>();
         //sprites = GetComponent<SpriteRenderer>();
@@ -55,7 +55,5 @@ public class Win : MonoBehaviour
 	{
 		yield return new WaitForSeconds(delay);
 		youWin.SetActive(true);
-		yield return new WaitForSeconds(delay);
-		SceneManager.LoadScene(0);
 	}
 }

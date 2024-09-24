@@ -57,7 +57,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "Arrows",
+                    "name": "WASD",
                     "id": "7163e802-a557-45dd-bf31-3f856d7051ee",
                     "path": "2DVector(mode=1)",
                     "interactions": "",
@@ -82,6 +82,39 @@
                     "name": "Right",
                     "id": "70235f0a-ce74-4eca-8ca6-c0d33bc9aaf6",
                     "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Arrows",
+                    "id": "0052bd73-bef3-4860-b6c3-8a268ebd4d6f",
+                    "path": "2DVector(mode=1)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Left",
+                    "id": "25411e34-6b4d-417e-845d-1a860c5e93df",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Right",
+                    "id": "54b1397d-6060-4f15-96b1-5e2504a15e23",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

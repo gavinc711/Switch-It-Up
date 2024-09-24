@@ -12,45 +12,19 @@ public class PauseM : MonoBehaviour
     public GameObject settings;
     public GameObject pause;
     public GameObject controls;
-
-
-    void Start()
-    {
-        Resume();
-
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (GameIsPaused)
-            {
-                Resume();
-
-                if (settings.activeSelf)
-                {
-                    settings.SetActive(false);
-                }
-
-                if (controls.activeSelf)
-                {
-                    controls.SetActive(false);
-                }
-
-            } else
-            {
-                Paused();
-            }
-        }
-    }
+	public GameObject overhead;
 
      public void Resume()
     {
-       
         pause.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
+		overhead.SetActive(true);
+		
+		if (settings.activeSelf)
+            settings.SetActive(false);
+        if (controls.activeSelf)
+            controls.SetActive(false);
     }
 
     public void Paused()
@@ -58,5 +32,6 @@ public class PauseM : MonoBehaviour
         pause.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        overhead.SetActive(false);
     }
 }

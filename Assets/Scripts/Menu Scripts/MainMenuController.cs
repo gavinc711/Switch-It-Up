@@ -83,6 +83,8 @@ public class MainMenuController : MonoBehaviour
 			settings.gameObject.SetActive(false);
         if (extras.activeSelf)
 			extras.gameObject.SetActive(false);
+		 if (lvls.activeSelf)
+			lvls.gameObject.SetActive(false);
     }
 
     public void RestartGame() 
