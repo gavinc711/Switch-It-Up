@@ -9,8 +9,10 @@ using UnityEngine.InputSystem;
 public class MainMenuController : MonoBehaviour
 {
     public GameObject settings;
-    public GameObject credits;
+    public GameObject extras;
     public GameObject controls;
+    public GameObject credits;
+    public GameObject gallery;
     public GameObject lvls;
 
     public int currentSceneIndex;
@@ -42,6 +44,16 @@ public class MainMenuController : MonoBehaviour
         settings.gameObject.SetActive(true);
     }
 
+    public void Extras()
+    {
+        extras.gameObject.SetActive(true);
+    }
+
+    public void Gallery()
+    {
+        gallery.gameObject.SetActive(true);
+    }
+
     public void Credits()
     {
         credits.gameObject.SetActive(true);
@@ -57,13 +69,20 @@ public class MainMenuController : MonoBehaviour
         controls.gameObject.SetActive(false);
         settings.gameObject.SetActive(true);
     }
+
+    public void BackToExtras()
+    {
+        gallery.gameObject.SetActive(false);
+        credits.gameObject.SetActive(false);
+        extras.gameObject.SetActive(true);
+    }
 	
 	public void BackToMain()
     {
         if (settings.activeSelf)
 			settings.gameObject.SetActive(false);
-		if (credits.activeSelf)
-			credits.gameObject.SetActive(false);
+        if (extras.activeSelf)
+			extras.gameObject.SetActive(false);
     }
 
     public void RestartGame() 

@@ -1,17 +1,53 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using UnityEngine;
 
 public class PauseM : MonoBehaviour
 {
-    public GameObject pause;
     public bool GameIsPaused = false;
+    public GameObject settings;
+    public GameObject pause;
+    public GameObject controls;
 
-    public void Resume()
+
+    void Start()
     {
+        Resume();
+
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (GameIsPaused)
+            {
+                Resume();
+
+                if (settings.activeSelf)
+                {
+                    settings.SetActive(false);
+                }
+
+                if (controls.activeSelf)
+                {
+                    controls.SetActive(false);
+                }
+
+            } else
+            {
+                Paused();
+            }
+        }
+    }
+
+     public void Resume()
+    {
+       
         pause.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;

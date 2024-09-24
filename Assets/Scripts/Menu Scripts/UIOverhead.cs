@@ -8,10 +8,11 @@ using TMPro;
 
 public class UIOverhead : MonoBehaviour
 {
-    //public ScoreScript score;//Reference to the collectable script so that we drop stars on death
+    public Score stars;//Reference to the collectable script so that we drop stars on death
     public TextMeshProUGUI lvlNameTxt;
+    public TextMeshProUGUI ScoreTxt;
 
-    public void LevelName()
+    void Start()
     {
         int current = SceneManager.GetActiveScene().buildIndex;
 
@@ -35,5 +36,12 @@ public class UIOverhead : MonoBehaviour
         {
             lvlNameTxt.text = "Level 5";
         }
+
+        stars.AddScore(stars.score);
+        ScoreTxt.text = "Score: " + stars.score.ToString();
     }
+
+ 
+
+    
 }
