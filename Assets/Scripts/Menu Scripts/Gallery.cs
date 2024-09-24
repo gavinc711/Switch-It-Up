@@ -17,9 +17,27 @@ public class Gallery : MonoBehaviour
     public GameObject greyImage;
     public GameObject greenImage;
     public GameObject blueImage;
+    public Score ScoreScript;
 
+    void Awake()
+    {
+        GameObject targetObject = GameObject.Find("ScoreTracker");
+        if (targetObject != null)
+        {
+            ScoreScript = targetObject.GetComponent<Score>();
+        }
+        if (ScoreScript != null)
+        {
+            Debug.Log("Player found score script.");
+        }
+        else
+        {
+            Debug.LogError("script reference is not found on the target gameobject!");
+        }
+    }
     public void party()
     {
+        if ScoreScript.score >
         partyImage.gameObject.SetActive(true);
     }
 

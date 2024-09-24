@@ -21,11 +21,12 @@ public class Score : MonoBehaviour
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);  // Keep this manager across scenes
         // Singleton pattern
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);  // Keep this manager across scenes
+            
         }
         else
         {
