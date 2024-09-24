@@ -166,4 +166,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectableID: 
-  scoreValue: 1
+  starSound: {fileID: 8300000, guid: 3979630b4175abb44b03a129d8bf541c, type: 3}

@@ -13,6 +13,8 @@ public class PauseM : MonoBehaviour
     public GameObject pause;
     public GameObject controls;
 	public GameObject overhead;
+    public AudioClip pauseSound;
+
 
     private void Start()
     {
@@ -34,6 +36,7 @@ public class PauseM : MonoBehaviour
 
     public void Paused()
     {
+        Music.instance.PlaySoundEffect(pauseSound);
         pause.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;

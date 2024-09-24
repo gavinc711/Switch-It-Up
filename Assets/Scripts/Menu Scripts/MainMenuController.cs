@@ -43,7 +43,7 @@ public class MainMenuController : MonoBehaviour
 
     public int currentSceneIndex;
     public int nextSceneIndex;
-
+    private int m = 0;
     
     public void PlayGame2()
     {
@@ -52,6 +52,14 @@ public class MainMenuController : MonoBehaviour
 
         // Calculate the next scene index
         nextSceneIndex = currentSceneIndex + 1;
+        //This shit swaps music tracks between levels
+        if (nextSceneIndex == 1)
+            m = nextSceneIndex;
+        else
+            m = (nextSceneIndex % 2) + 1;
+        Debug.Log("m = " + m + "CSI = " + nextSceneIndex);
+        Music.instance.SwitchMusic(m);
+
 
         // Check if the next scene index is within the valid range of scenes in the build settings
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
@@ -63,6 +71,8 @@ public class MainMenuController : MonoBehaviour
         {
             Debug.LogWarning("No more scenes in the build order.");
         }
+
+        
     }
 
     public void Settings()
@@ -193,5 +203,6 @@ public class MainMenuController : MonoBehaviour
 	public void LoadMainMenu()
 	{
 		SceneManager.LoadScene(0);
-	}
+        Music.instance.SwitchMusic(0);
+    }
 }

@@ -147,6 +147,7 @@ MonoBehaviour:
   youWin: {fileID: 0}
   sprites: {fileID: 0}
   newSprite: {fileID: 21300000, guid: 9c5ec17e93464fd4fbd79b1d0fbff68d, type: 3}
+  winSound: {fileID: 8300000, guid: f22fd6e48ff22c04bae9e82032f8cfc0, type: 3}
 --- !u!95 &6489213809127964980
 Animator:
   serializedVersion: 5

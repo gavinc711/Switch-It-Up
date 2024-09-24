@@ -29,6 +29,8 @@ public class PlayerScript : MonoBehaviour
     private bool isFacingRight = true;
     private bool isDead;
     public Score ScoreScript;//Reference to the collectable script so that we drop stars on death
+    public AudioClip jumpSound;
+    public AudioClip deathSound;
 
     //sets everything as game starts up
     void Awake()
@@ -105,6 +107,7 @@ public class PlayerScript : MonoBehaviour
 
     private void jump()
     {
+        Music.instance.PlaySoundEffect(jumpSound);
         rbody.velocity += Vector2.up * jumpHeight;
     }
 
@@ -138,9 +141,7 @@ public class PlayerScript : MonoBehaviour
         animator.SetBool("IsDead", true);
         isDead = true;
 
-        //Drop any items you collected
-        
-
+        Music.instance.PlaySoundEffect(deathSound);
 
         // Disable player controls to prevent movement during death
         input.Disable();

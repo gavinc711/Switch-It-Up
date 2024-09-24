@@ -10,9 +10,10 @@ public class Win : MonoBehaviour
 	public Sprite newSprite;
 	private Score ScoreScript;
     private Animator animator;
+    public AudioClip winSound;
     //private bool won = false;
-    
-	void Awake()
+
+    void Awake()
 	{
         animator = GetComponent<Animator>();
         //sprites = GetComponent<SpriteRenderer>();
@@ -46,8 +47,10 @@ public class Win : MonoBehaviour
             ScoreScript.TransferPending();
 			other.gameObject.SetActive(false);
 			//sprites.sprite = newSprite;
+            
+            Music.instance.PlaySoundEffect(winSound);
 
-			StartCoroutine(WaitForMenu(2f));
+        StartCoroutine(WaitForMenu(2f));
 		}
     }
 	

@@ -151,6 +151,10 @@ MonoBehaviour:
   speed: 5
   jumpHeight: 20
   ScoreScript: {fileID: 0}
+  jumpSound: {fileID: 8300000, guid: 2a2b9dd5a6008b8469468ab2c977acf1, type: 3}
+  deathSound: {fileID: 8300000, guid: 0a83393855e037940be08a1f610f518b, type: 3}
+  starSound: {fileID: 8300000, guid: 3979630b4175abb44b03a129d8bf541c, type: 3}
+  winSound: {fileID: 8300000, guid: f22fd6e48ff22c04bae9e82032f8cfc0, type: 3}
 --- !u!50 &8157735446054790086
 Rigidbody2D:
   serializedVersion: 4
@@ -215,4 +219,5 @@ MonoBehaviour:
   settings: {fileID: 0}
   pause: {fileID: 0}
   controls: {fileID: 0}
-  tutorial: {fileID: 0}
+  overhead: {fileID: 0}
+  pauseSound: {fileID: 8300000, guid: fe213bf5528198a4495674aafc7eff49, type: 3}

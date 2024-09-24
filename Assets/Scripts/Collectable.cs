@@ -11,6 +11,7 @@ public class Collectable : MonoBehaviour
     //public string temp3;
     private Score ScoreScript;
     //private List<GameObject> activeCollectables = new List<GameObject>();
+    public AudioClip starSound;
     void Start()
     {
         // Find the GameObject by name and get the script component
@@ -39,8 +40,7 @@ public class Collectable : MonoBehaviour
             {
                 gameObject.SetActive(false);
                 ScoreScript.PendingCollect(collectableID);
-                //Debug.Log(temp1 + " " + temp2 + " " + temp3);
-                //CollectItem();
+                Music.instance.PlaySoundEffect(starSound);
             }
         }
     }
