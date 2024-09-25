@@ -11,6 +11,7 @@ public class UIOverhead : MonoBehaviour
     private Score ScoreScript;//Reference to the collectable script so that we drop stars on death
     public TextMeshProUGUI lvlNameTxt;
     public TextMeshProUGUI ScoreTxt;
+    public TextMeshProUGUI winscoreTxt;
 
     void Start()
     {
@@ -51,6 +52,8 @@ public class UIOverhead : MonoBehaviour
         }
 
         ScoreTxt.text = "Score: " + ScoreScript.score.ToString();
+        winscoreTxt.text = ScoreScript.score.ToString();
+
     }
 
  
