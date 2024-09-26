@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Win : MonoBehaviour
 {
     public GameObject youWin;
     public GameObject comet;
+	public GameObject winFirst;
 	public SpriteRenderer sprites;
 	public Sprite newSprite;
+
 	private Score ScoreScript;
     private Animator animator;
     private Animator cometAnimator;
@@ -82,5 +85,7 @@ public class Win : MonoBehaviour
 	{
 		yield return new WaitForSeconds(delay);
 		youWin.SetActive(true);
+		EventSystem.current.SetSelectedGameObject(null);
+		EventSystem.current.SetSelectedGameObject(winFirst);
 	}
 }

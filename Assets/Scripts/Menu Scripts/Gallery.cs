@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Gallery : MonoBehaviour
 {
@@ -18,6 +19,18 @@ public class Gallery : MonoBehaviour
     public GameObject greenImage;
     public GameObject blueImage;
     public Score ScoreScript;
+	
+	//EventSystem button settings to make UI work for controller
+	public GameObject partyFirst;
+    public GameObject conceptFirst;
+    public GameObject alienFirst;
+    public GameObject golfFirst;
+    public GameObject purpleFirst;
+    public GameObject redFirst;
+    public GameObject greyFirst;
+    public GameObject greenFirst;
+    public GameObject blueFirst;
+	public GameObject galleryFirst;
 
     void Awake()
     {
@@ -37,18 +50,23 @@ public class Gallery : MonoBehaviour
     }
     public void party()
     {
-
         partyImage.gameObject.SetActive(true);
+		EventSystem.current.SetSelectedGameObject(null);
+		EventSystem.current.SetSelectedGameObject(partyFirst);
     }
 
     public void alien()
     {
         alienImage.gameObject.SetActive(true);
+		EventSystem.current.SetSelectedGameObject(null);
+		EventSystem.current.SetSelectedGameObject(alienFirst);
     }
 
     public void golf()
     {
         golfImage.gameObject.SetActive(true);
+		EventSystem.current.SetSelectedGameObject(null);
+		EventSystem.current.SetSelectedGameObject(golfFirst);
     }
 
     /* public void cs()
@@ -59,31 +77,43 @@ public class Gallery : MonoBehaviour
     public void concept()
     {
         conceptImage.gameObject.SetActive(true);
+		EventSystem.current.SetSelectedGameObject(null);
+		EventSystem.current.SetSelectedGameObject(conceptFirst);
     }
 
     public void purple()
     {
         purpleImage.gameObject.SetActive(true);
+		EventSystem.current.SetSelectedGameObject(null);
+		EventSystem.current.SetSelectedGameObject(purpleFirst);
     }
 
     public void red()
     {
         redImage.gameObject.SetActive(true);
+		EventSystem.current.SetSelectedGameObject(null);
+		EventSystem.current.SetSelectedGameObject(redFirst);
     }
 
     public void grey()
     {
         greyImage.gameObject.SetActive(true);
+		EventSystem.current.SetSelectedGameObject(null);
+		EventSystem.current.SetSelectedGameObject(greyFirst);
     }
 
     public void green()
     {
         greenImage.gameObject.SetActive(true);
+		EventSystem.current.SetSelectedGameObject(null);
+		EventSystem.current.SetSelectedGameObject(greenFirst);
     }
 
     public void blue()
     {
         blueImage.gameObject.SetActive(true);
+		EventSystem.current.SetSelectedGameObject(null);
+		EventSystem.current.SetSelectedGameObject(blueFirst);
     }
 
     public void Back()
@@ -101,6 +131,8 @@ public class Gallery : MonoBehaviour
         greyImage.gameObject.SetActive(false);
         greenImage.gameObject.SetActive(false);
         blueImage.gameObject.SetActive(false);
-
+		
+		EventSystem.current.SetSelectedGameObject(null);
+		EventSystem.current.SetSelectedGameObject(galleryFirst);
     }
 }

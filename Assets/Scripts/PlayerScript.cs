@@ -79,8 +79,8 @@ public class PlayerScript : MonoBehaviour
         //Check if jump is pressed and player is on the ground
         if (input.Control.Jump.triggered && IsGrounded())
         {
-            jump();
-            stageChange();
+			jump();
+			stageChange();
         }
 		
 		if (input.Control.Pause.triggered)
